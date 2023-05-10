@@ -1,0 +1,20 @@
+[
+    {
+      "email": "ferteste@cypress.io",
+      "fullName": "Fernanda Oliveira",
+      "userName": "feroliveira",
+      "password": "senha123"
+    },
+    {
+      "email": "joaoteste@cypress.io",
+      "fullName": "João Oliveira",
+      "userName": "joaooliveira",
+      "password": "senha123"
+    },
+    {
+      "email": "sabrina@cypress.io",
+      "fullName": "Sabrina Oliveira",
+      "userName": "saboliveira",
+      "password": "senha123"
+    }
+  ]

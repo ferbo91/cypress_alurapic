@@ -1,0 +1,17 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "signin": "npx cypress run --spec 'cypress/e2e/signin.cy.js' --reporter mochawesome",
+    "signup": "npx cypress run --spec 'cypress/e2e/signup.cy.js' --reporter mochawesome",
+    "api": "npx cypress run --spec 'cypress/e2e/api-alurapic.cy.js' --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.11.0",
+    "mochawesome": "^7.1.3"
+  }
+}
