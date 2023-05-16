@@ -1,4 +1,4 @@
-describe('Sign Up', () => {
+describe('Sign In', () => {
 
     beforeEach(() => {
         cy.visit('/')
@@ -13,27 +13,21 @@ describe('Sign Up', () => {
     })
 
     it('Verify invalid username message', () => {
-        cy.get('input[formcontrolname="userName"]').type('fertest')
-        cy.get('input[formcontrolname="password"]').type('senha123')
-        cy.contains('button', 'login').click()
+        cy.login('fertest', 'senha123')
         cy.on('window:alert', (str) => {
             expect(str).to.equal('Invalid user name or password');
         })
     })
 
     it('Verify invalid username message', () => {
-        cy.get('input[formcontrolname="userName"]').type('ferteste')
-        cy.get('input[formcontrolname="password"]').type('senha12')
-        cy.contains('button', 'login').click()
+        cy.login('ferteste', 'senha12')
         cy.on('window:alert', (str) => {
             expect(str).to.equal('Invalid user name or password');
         })
     })
 
     it('Login with success', () => {
-        cy.get('input[formcontrolname="userName"]').type('ferbo91')
-        cy.get('input[formcontrolname="password"]').type('senha123')
-        cy.contains('button', 'login').click()
+        cy.login('ferbo91', 'senha123')
         cy.contains('a','ferbo91').should('be.visible')
     })
     
